@@ -1,0 +1,51 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows:  1fr 5fr 1fr;
+    grid-template-areas:
+            "h h h h h h"
+            "m c c c c k"
+            "f f f f f f";
+
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-rows: 10% 10% 60% 10% 10%;
+        grid-template-areas:
+                "h h h h h h"
+                "m m m m m m"
+                "c c c c c c"
+                "k k k k k k"
+                "f f f f f f";
+    }
+}
+
+.header {
+    background-color: aqua;
+    grid-area: h;
+}
+.menu {
+    background-color: chartreuse;
+    grid-area: m;
+}
+.main {
+    background-color: forestgreen;
+    grid-area: c;
+}
+.ads {
+    background-color: chartreuse;
+    grid-area: k;
+}
+.footer {
+    background-color: aqua;
+    grid-area: f;
+}

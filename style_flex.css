@@ -1,0 +1,35 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+.container, .container_mid{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_mid{
+    flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+    .container_mid {
+     flex-direction: column;
+    }
+}
+
+.header, .footer {
+    background-color: aqua;
+    flex-basis: 20%;
+
+}
+.menu, .ads {
+    background-color: chartreuse;
+    flex-basis: 20%;
+}
+.main {
+    background-color: forestgreen;
+    flex-basis: 60%;
+}
